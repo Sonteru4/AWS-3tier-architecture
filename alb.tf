@@ -54,7 +54,5 @@ target_groups = [
       }
    }
   ]
-  tags = {
-        Name= "3tier-alb"
-    } 
+
 }
