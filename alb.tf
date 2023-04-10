@@ -53,10 +53,7 @@ target_groups = [
           target_id = module.ec2_private[1].id
           port      = 80
         }        
-      }
-      tags {
-        Name= "3tier-target group"
-    }     
+      } 
   ]
   tags {
         Name= "3tier-alb"
