@@ -51,7 +51,7 @@ target_groups = [
           target_id = module.ec2_private[1].id
           port      = 80
         }        
-        }
+      }
    }
   ]
   tags = {
