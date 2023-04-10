@@ -10,7 +10,7 @@ module "ec2_public" {
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
   subnet_id              = module.vpc.public_subnets[0]
 
-  tags{
+  tags = {
     Name = "Bastion-3 tier"
   }
 }
