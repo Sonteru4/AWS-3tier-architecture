@@ -54,11 +54,11 @@ target_groups = [
           port      = 80
         }        
       }
-      tags{
+      tags {
         Name= "3tier-target group"
     }     
   ]
-  tags{
+  tags {
         Name= "3tier-alb"
     } 
 }
