@@ -1,7 +1,7 @@
 resource "aws_security_group" "private_sg" {
   name        = "private_sg"
   description = "private security group"
-  vpc_id      = module.vpc.vpc.id
+  vpc_id      = module.vpc.vpc_id
 
   dynamic "ingress" {               # its a dynamic ingress ( incoming traffic)
     for_each = [22, 80, 443]        # for_each loop
