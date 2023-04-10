@@ -10,8 +10,6 @@ module "alb" {
   subnets            = [module.vpc.public_subnets[0],module.vpc.public_subnets[1]]
   security_groups    = [aws_security_group.private_sg.id]
 
- 
-
   #Listener
 
   http_tcp_listeners = [
@@ -54,6 +52,10 @@ target_groups = [
           port      = 80
         }        
       } 
+     tags {
+        Name= "3tier-target group"
+    } 
+        }
   ]
   tags {
         Name= "3tier-alb"
