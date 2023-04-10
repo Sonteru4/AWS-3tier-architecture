@@ -13,7 +13,7 @@ module "ec2_private" {
   subnet_id            = element(module.vpc.private_subnets, count.index)
 
   user_data = file("${path.module}/userdata.sh")
-  tags {
+  tags = {
     Name = "3tier-application-servers"
   }
 }
